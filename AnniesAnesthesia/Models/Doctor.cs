@@ -15,7 +15,7 @@ namespace AnniesAnesthesia.Models
       this.JoinEntitiesSpecialty = new HashSet<DoctorSpecialty>();
 =======
 
-namespace AnniesAnesthesia
+namespace AnniesAnesthesia.Models
 {
   public class Doctor
   {
@@ -39,6 +39,10 @@ namespace AnniesAnesthesia
 =======
     public string Specialty { get; set; }
     public string HireDate { get; set; }
+<<<<<<< HEAD
 >>>>>>> fbd9cde (adds CRUD functionality to doctor and patient models and routes Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
+=======
+    public virtual ICollection<DoctorPatient> JoinEntities { get; set; }
+>>>>>>> e450e1f (completes and implements CRUD functionality Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
   }
 }

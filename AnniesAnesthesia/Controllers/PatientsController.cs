@@ -29,6 +29,9 @@ namespace AnniesAnesthesia
       return View(_db.Patients.ToList());
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e450e1f (completes and implements CRUD functionality Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
     public ActionResult Create()
     {
       ViewBag.DoctorId = new SelectList(_db.Doctors, "DoctorId", "Name");
@@ -46,8 +49,11 @@ namespace AnniesAnesthesia
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+<<<<<<< HEAD
 =======
 >>>>>>> fbd9cde (adds CRUD functionality to doctor and patient models and routes Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
+=======
+>>>>>>> e450e1f (completes and implements CRUD functionality Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
     public ActionResult Details(int id)
     {
       var thisPatient = _db.Patients
@@ -57,6 +63,9 @@ namespace AnniesAnesthesia
       return View(thisPatient);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e450e1f (completes and implements CRUD functionality Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
     public ActionResult Edit(int id)
     {
       var thisPatient = _db.Patients.FirstOrDefault(patient => patient.PatientId == id);
@@ -104,14 +113,21 @@ namespace AnniesAnesthesia
       return RedirectToAction("Index");
     }
     [HttpPost]
+<<<<<<< HEAD
     public ActionResult DeleteDoctor(int joinId)
+=======
+    public ActionResult DeleteCategory(int joinId)
+>>>>>>> e450e1f (completes and implements CRUD functionality Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
     {
       var joinEntry = _db.DoctorPatient.FirstOrDefault(entry => entry.DoctorPatientId == joinId);
       _db.DoctorPatient.Remove(joinEntry);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+<<<<<<< HEAD
 =======
 >>>>>>> fbd9cde (adds CRUD functionality to doctor and patient models and routes Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
+=======
+>>>>>>> e450e1f (completes and implements CRUD functionality Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
   }
 }

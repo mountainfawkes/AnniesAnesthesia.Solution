@@ -29,6 +29,10 @@ namespace AnniesAnesthesia.Models
 =======
     public string Birthdate { get; set; }
     public string Ailment { get; set; }
+<<<<<<< HEAD
 >>>>>>> fbd9cde (adds CRUD functionality to doctor and patient models and routes Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
+=======
+    public virtual ICollection<DoctorPatient> JoinEntities { get; }
+>>>>>>> e450e1f (completes and implements CRUD functionality Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
   }
 }
