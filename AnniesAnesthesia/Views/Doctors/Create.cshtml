@@ -8,11 +8,11 @@
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, new { @class="form-control", @required="required"})
   @Html.LabelFor(model => model.Specialty)
-  @Html.TextBoxFor(model => model.Specialty)
+  @Html.TextBoxFor(model => model.Specialty, new { @class="form-control", @required="required"})
   @Html.LabelFor(model => model.HireDate)
-  @Html.TextBoxFor(model => model.HireDate)
+  @Html.TextBoxFor(model => model.HireDate, new { @class="form-control", @required="required", type="date"})
   <input type="submit" value="Add new doctor" />
 }
-<p>@Html.ActionLink("Show all doctors", "Index")</p>
+<p>@Html.ActionLink("Show all doctors", "Index")</p>, 
