@@ -1,0 +1,7 @@
+body {
+  background-image: url("../img/zombie.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vh;
+  font-size: 2.5em;
+}
