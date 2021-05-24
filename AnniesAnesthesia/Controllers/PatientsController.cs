@@ -5,7 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using AnniesAnesthesia.Models;
 
+<<<<<<< HEAD
 namespace AnniesAnesthesia
+=======
+namespace AnniesAnesthesialers
+>>>>>>> fbd9cde (adds CRUD functionality to doctor and patient models and routes Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
 {
   public class PatientsController : Controller
   {
@@ -20,6 +24,7 @@ namespace AnniesAnesthesia
     {
       return View(_db.Patients.ToList());
     }
+<<<<<<< HEAD
     public ActionResult Create()
     {
       ViewBag.DoctorId = new SelectList(_db.Doctors, "DoctorId", "Name");
@@ -37,6 +42,8 @@ namespace AnniesAnesthesia
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+=======
+>>>>>>> fbd9cde (adds CRUD functionality to doctor and patient models and routes Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
     public ActionResult Details(int id)
     {
       var thisPatient = _db.Patients
@@ -45,6 +52,7 @@ namespace AnniesAnesthesia
         .FirstOrDefault(patient => patient.PatientId == id);
       return View(thisPatient);
     }
+<<<<<<< HEAD
     public ActionResult Edit(int id)
     {
       var thisPatient = _db.Patients.FirstOrDefault(patient => patient.PatientId == id);
@@ -99,5 +107,7 @@ namespace AnniesAnesthesia
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+=======
+>>>>>>> fbd9cde (adds CRUD functionality to doctor and patient models and routes Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
   }
 }
