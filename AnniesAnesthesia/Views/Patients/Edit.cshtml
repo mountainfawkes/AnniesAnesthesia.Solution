@@ -40,6 +40,7 @@
 =======
 @using (Html.BeginForm())
 {
+<<<<<<< HEAD
     @Html.HiddenFor(model => model.PatientId)
 
     @Html.LabelFor(model => model.Name)
@@ -50,6 +51,23 @@
 
     <input type="submit" value="Save" />
 >>>>>>> 11c407b (adds CRUD views for patients)
+=======
+  @Html.HiddenFor(model => model.PatientId)
+  <br>
+  @Html.LabelFor(model => model.Name)
+  @Html.EditorFor(model => model.Name)
+  <br>
+  @Html.LabelFor(model => model.Birthdate)
+  @Html.TextBoxFor(model => model.Birthdate)
+  <br>
+  @Html.LabelFor(model => model.Ailment)
+  @Html.TextBoxFor(model => model.Ailment)
+  <br>
+  @Html.Label("Select Doctor")
+  @Html.DropDownList("DoctorId")
+  <br>
+  <input type="submit" value="Save" />
+>>>>>>> 7430c64 (adds all patient properties to edit form)
 }
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
