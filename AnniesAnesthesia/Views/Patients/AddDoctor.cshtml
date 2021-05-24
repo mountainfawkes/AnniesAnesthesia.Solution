@@ -4,18 +4,15 @@
 
 @model AnniesAnesthesia.Models.Patient
 
-<h2>Edit</h2>
+<h2>Add a doctor</h2>
 
-<h4>Edit this Patient: @Html.DisplayFor(model => model.Name)</h4>
+<h4>Add a doctor to this task: @Html.DisplayFor(model => model.Name)</h4>
 
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.PatientId)
 
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
-
-    @Html.Label("Select Doctor")
+    @Html.Label("Select doctor")
     @Html.DropDownList("DoctorId")
 
     <input type="submit" value="Save" />
