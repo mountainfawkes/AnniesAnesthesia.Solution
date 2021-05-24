@@ -5,21 +5,21 @@ using System.IO;
 
 namespace AnniesAnesthesia.Models
 {
-  public class AnniesAnesthesiaContextFactory : IDesignTimeDbContextFactory<AnniesAnesthesiaContext>
+  public class ClinicContextFactory : IDesignTimeDbContextFactory<ClinicContext>
   {
 
-    AnniesAnesthesiaContext IDesignTimeDbContextFactory<AnniesAnesthesiaContext>.CreateDbContext(string[] args)
+    ClinicContext IDesignTimeDbContextFactory<ClinicContext>.CreateDbContext(string[] args)
     {
       IConfigurationRoot configuration = new ConfigurationBuilder()
           .SetBasePath(Directory.GetCurrentDirectory())
           .AddJsonFile("appsettings.json")
           .Build();
 
-      var builder = new DbContextOptionsBuilder<AnniesAnesthesiaContext>();
+      var builder = new DbContextOptionsBuilder<ClinicContext>();
 
       builder.UseMySql(configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(configuration["ConnectionStrings:DefaultConnection"]));
 
-      return new AnniesAnesthesiaContext(builder.Options);
+      return new ClinicContext(builder.Options);
     }
   }
 }
