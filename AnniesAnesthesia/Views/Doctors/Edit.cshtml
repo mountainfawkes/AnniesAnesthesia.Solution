@@ -14,6 +14,7 @@
 
   @Html.LabelFor(model => model.Name)
   @Html.EditorFor(model => model.Name)
+<<<<<<< HEAD
   <br>
   @Html.LabelFor(model => model.RealHireDate)
   @Html.EditorFor(model => model.RealHireDate, new {@class="form-control", @type="date", @required="required"})
@@ -21,6 +22,13 @@
   @Html.Label("Add a Specialty")
   @Html.DropDownList("SpecialtyId")
   <br>
+=======
+  @Html.LabelFor(model => model.Specialty)
+  @Html.EditorFor(model => model.Specialty)
+  @Html.LabelFor(model => model.HireDate)
+  @Html.EditorFor(model => model.HireDate)
+
+>>>>>>> 90a71d5 (adds CRUD functionality for doctors views)
   <input type="submit" value="Save" />
 }
 <p>@Html.ActionLink("Back to list", "Index")</p>

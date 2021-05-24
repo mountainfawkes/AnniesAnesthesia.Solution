@@ -7,7 +7,11 @@
 <h2>Doctor Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<<<<<<< HEAD
 <br>
+=======
+
+>>>>>>> 90a71d5 (adds CRUD functionality for doctors views)
 @if(@Model.JoinEntities.Count == 0)
 {
   <p>This doctor does not attend to any patients</p>
@@ -22,6 +26,7 @@ else
   }
   </ul>
 }
+<<<<<<< HEAD
 <br>
 
 @if(@Model.JoinEntitiesSpecialty.Count == 0)
@@ -38,6 +43,9 @@ else
   }
   </ul>
 }
+=======
+
+>>>>>>> 90a71d5 (adds CRUD functionality for doctors views)
 <p>@Html.ActionLink("Back to doctors", "Index")</p>
 <p>@Html.ActionLink("Edit doctor", "Edit", new { id = Model.DoctorId })</p>
 <p>@Html.ActionLink("Delete doctor", "Delete", new { id = Model.DoctorId })</p>
