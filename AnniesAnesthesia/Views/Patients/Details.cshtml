@@ -7,7 +7,8 @@
 <h2>Patient Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-
+<h3>@Html.DisplayNameFor(model => model.Ailment): @Html.DisplayFor(model => model.Ailment)</h3>
+<br>
 @if(@Model.JoinEntities.Count == 0)
 {
   <p>This patient does not belong to any doctors</p>
@@ -15,18 +16,19 @@
 else
 {
   <h4>Doctors the patient is assigned to:</h4>
-<ul>
-  @foreach(var join in Model.JoinEntities)
-  {
-    <li>@join.Doctor.Name</li>
-    @using (Html.BeginForm("DeleteDoctor", "Patients"))
+  <ul>
+    @foreach(var join in Model.JoinEntities)
     {
-      @Html.Hidden("joinId", @join.DoctorPatientId)
-      <input type="submit" value="Delete"/>
+      <li>@join.Doctor.Name</li>
+      @using (Html.BeginForm("DeleteDoctor", "Patients"))
+      {
+        @Html.Hidden("joinId", @join.DoctorPatientId)
+        <input type="submit" value="Delete"/>
+      }
     }
-  }
-  </ul>}
-
+  </ul>
+}
+<br>
 <p>@Html.ActionLink("Back to list", "Index")</p>
 <p>@Html.ActionLink("Edit Patient", "Edit", new { id = Model.PatientId })</p>
 <p>@Html.ActionLink("Delete Patient", "Delete", new { id = Model.PatientId })</p>
