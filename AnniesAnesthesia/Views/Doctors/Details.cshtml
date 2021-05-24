@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+
+@model AnniesAnesthesia.Models.Doctor;
+
+<h2>Doctor Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+
+@if(@Model.JoinEntities.Count == 0)
+{
+  <p>This doctor does not attend to any patients</p>
+}
+else
+{
+  <h4>Patients the Doctor attends to:</h4>
+  <ul>
+  @foreach(var join in Model.JoinEntities)
+  {
+    <li>@join.Patient.Name</li>
+  }
+  </ul>
+}
+
+<p>@Html.ActionLink("Back to doctors", "Index")</p>
+<p>@Html.ActionLink("Edit doctor", "Edit", new { id = Model.DoctorId })</p>
+<p>@Html.ActionLink("Delete doctor", "Delete", new { id = Model.DoctorId })</p>
