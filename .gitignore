@@ -2,5 +2,9 @@
 */bin/
 */appsettings.json
 */.vscode
+<<<<<<< HEAD
 */.DS_Store
 .env
+=======
+*/.vs
+>>>>>>> e6d362d (junk commit restructures files Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
