@@ -12,5 +12,6 @@ namespace AnniesAnesthesia.Models
     public string Name { get; set; }
     public string Birthdate { get; set; }
     public string Ailment { get; set; }
+    public virtual ICollection<DoctorPatient> JoinEntities { get; }
   }
 }
