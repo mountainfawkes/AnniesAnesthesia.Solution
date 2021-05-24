@@ -20,6 +20,7 @@
 else
 {
   <h4>Doctors the patient is assigned to:</h4>
+<<<<<<< HEAD
   <ul>
 <<<<<<< HEAD
     @foreach(var join in Model.JoinEntities)
@@ -35,12 +36,19 @@ else
 }
 <br>
 =======
+=======
+<ul>
+>>>>>>> 11c407b (adds CRUD views for patients)
   @foreach(var join in Model.JoinEntities)
   {
     <li>@join.Doctor.Name</li>
+    @using (Html.BeginForm("DeleteDoctor", "Patients"))
+    {
+      @Html.Hidden("joinId", @join.DoctorPatientId)
+      <input type="submit" value="Delete"/>
+    }
   }
-  </ul>
-}
+  </ul>}
 
 >>>>>>> 54910cc (creates Home and Patients views)
 <p>@Html.ActionLink("Back to list", "Index")</p>

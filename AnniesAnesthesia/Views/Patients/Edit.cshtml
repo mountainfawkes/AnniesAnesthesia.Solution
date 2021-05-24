@@ -8,6 +8,7 @@
 
 <h4>Edit this Patient: @Html.DisplayFor(model => model.Name)</h4>
 
+<<<<<<< HEAD
 <h4>Doctors the patient is assigned to:</h4>
 <ol>
   @foreach(var join in Model.JoinEntities)
@@ -36,6 +37,19 @@
   @Html.DropDownList("DoctorId")
   <br>
   <input type="submit" value="Save" />
+=======
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.PatientId)
+
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+
+    @Html.Label("Select Doctor")
+    @Html.DropDownList("DoctorId")
+
+    <input type="submit" value="Save" />
+>>>>>>> 11c407b (adds CRUD views for patients)
 }
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
