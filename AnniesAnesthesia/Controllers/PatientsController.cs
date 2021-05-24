@@ -6,10 +6,14 @@ using System.Linq;
 using AnniesAnesthesia.Models;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace AnniesAnesthesia
 =======
 namespace AnniesAnesthesialers
 >>>>>>> fbd9cde (adds CRUD functionality to doctor and patient models and routes Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
+=======
+namespace AnniesAnesthesia
+>>>>>>> c600619 (corrects namespace Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
 {
   public class PatientsController : Controller
   {
