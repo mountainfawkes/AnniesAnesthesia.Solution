@@ -114,10 +114,14 @@ namespace AnniesAnesthesia
     }
     [HttpPost]
 <<<<<<< HEAD
+<<<<<<< HEAD
     public ActionResult DeleteDoctor(int joinId)
 =======
     public ActionResult DeleteCategory(int joinId)
 >>>>>>> e450e1f (completes and implements CRUD functionality Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
+=======
+    public ActionResult DeleteDoctor(int joinId)
+>>>>>>> c6159d2 (fixes route name for DeleteDoctor)
     {
       var joinEntry = _db.DoctorPatient.FirstOrDefault(entry => entry.DoctorPatientId == joinId);
       _db.DoctorPatient.Remove(joinEntry);
