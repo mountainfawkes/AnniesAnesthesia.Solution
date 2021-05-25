@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+@model AnniesAnesthesia.Models.Specialty
+
+<h4>Add a new Doctor Specialty</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.DropDownList("SpecialtyId")
+  <br>
+  <input type="submit" value="Add new specialty" class="btn btn-primary"/>
+}

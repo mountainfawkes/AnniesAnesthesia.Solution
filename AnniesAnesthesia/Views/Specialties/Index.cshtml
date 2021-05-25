@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@using AnniesAnesthesia.Models;
+@model List<AnniesAnesthesia.Models.Specialty>;
+
+<h1>Doctor Specialty</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No Doctor Specialty has been added yet!</h3>
+} 
+
+@foreach (Specialty specialty in Model)
+{
+  <li>@Html.ActionLink($"{specialty.SpecialtyName}", "Details", new { id = specialty.SpecialtyId })</li>
+}
+
+<p>@Html.ActionLink("Add new specialty", "Create")</p>
