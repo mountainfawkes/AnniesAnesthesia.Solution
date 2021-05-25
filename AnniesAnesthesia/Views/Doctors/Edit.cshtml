@@ -18,6 +18,8 @@
   @Html.LabelFor(model => model.RealHireDate)
   @Html.EditorFor(model => model.RealHireDate, new {@class="form-control", @type="date", @required="required"})
 
+  @Html.Label("Add a Specialty")
+  @Html.DropDownList("SpecialtyId")
 
   @*@Html.LabelFor(model => model.HireDate)
   @Html.EditorFor(model => model.HireDate)*@

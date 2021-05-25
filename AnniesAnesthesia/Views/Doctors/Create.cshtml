@@ -13,10 +13,9 @@
   @Html.LabelFor(model => model.RealHireDate)
   @Html.TextBoxFor(model => model.RealHireDate, new {@class="form-control", @type="date", @required="required"})
 
+  @Html.Label("Add a Specialty")
+  @Html.DropDownList("SpecialtyId")
 
-  @*@Html.LabelFor(model => model.HireDate)
-  @Html.TextBoxFor(model => model.HireDate, new { @class="form-control", @required="required", type="date"})*@
-  
   <input type="submit" value="Add new doctor" />
 }
-<p>@Html.ActionLink("Show all doctors", "Index")</p>, 
+<p>@Html.ActionLink("Show all doctors", "Index")</p> 
