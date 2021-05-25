@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AnniesAnesthesia.Models;
@@ -22,6 +23,7 @@ namespace AnniesAnesthesia.Controllers
 
     public ActionResult Create()
     {
+      ViewBag.SpecialtyId = new SelectList(_db.Specialties, "SpecialtyId", "SpecialtyName");
       return View();
     }
 
@@ -45,6 +47,7 @@ namespace AnniesAnesthesia.Controllers
     public ActionResult Edit(int id)
     {
       var thisDoctor = _db.Doctors.FirstOrDefault(doctor => doctor.DoctorId == id);
+      ViewBag.SpecialtyId = new SelectList(_db.Specialties, "SpecialtyId", "Name");
       return View(thisDoctor);
     }
 
