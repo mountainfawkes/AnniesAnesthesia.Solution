@@ -14,10 +14,13 @@
 
   @Html.LabelFor(model => model.Name)
   @Html.EditorFor(model => model.Name)
-  @Html.LabelFor(model => model.Specialty)
-  @Html.EditorFor(model => model.Specialty)
-  @Html.LabelFor(model => model.HireDate)
-  @Html.EditorFor(model => model.HireDate)
+
+  @Html.LabelFor(model => model.RealHireDate)
+  @Html.EditorFor(model => model.RealHireDate, new {@class="form-control", @type="date", @required="required"})
+
+
+  @*@Html.LabelFor(model => model.HireDate)
+  @Html.EditorFor(model => model.HireDate)*@
 
   <input type="submit" value="Save" />
 }

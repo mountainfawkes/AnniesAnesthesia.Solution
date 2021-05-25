@@ -8,6 +8,15 @@
 
 <h4>Edit this Patient: @Html.DisplayFor(model => model.Name)</h4>
 
+<h4>Doctors the patient is assigned to:</h4>
+<ol>
+  @foreach(var join in Model.JoinEntities)
+  {
+    <li>@join.Doctor.Name</li>
+  }
+</ol>
+
+
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.PatientId)
@@ -15,13 +24,18 @@
   @Html.LabelFor(model => model.Name)
   @Html.EditorFor(model => model.Name)
   <br>
-  @Html.LabelFor(model => model.Birthdate)
-  @Html.TextBoxFor(model => model.Birthdate)
+
+  @Html.LabelFor(model => model.RealBirthDate)
+  @Html.EditorFor(model => model.RealBirthDate, new {@class="form-control", @type="date", @required="required"})
+
+  @*@Html.LabelFor(model => model.Birthdate)
+  @Html.TextBoxFor(model => model.Birthdate)*@
+
   <br>
   @Html.LabelFor(model => model.Ailment)
   @Html.TextBoxFor(model => model.Ailment)
   <br>
-  @Html.Label("Select Doctor")
+  @Html.Label("Add a doctor")
   @Html.DropDownList("DoctorId")
   <br>
   <input type="submit" value="Save" />
