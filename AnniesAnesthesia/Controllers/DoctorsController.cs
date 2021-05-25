@@ -52,8 +52,12 @@ namespace AnniesAnesthesia.Controllers
     }
 
     [HttpPost]
-    public ActionResult Edit(Doctor doctor)
+    public ActionResult Edit(Doctor doctor, int specialtyId)//added int SpecialtyId
     {
+      if (specialtyId != 0 )//new w/ added parameter
+      {
+        _db.DoctorSpecialties.Add(new DoctorSpecialty() { SpecialtyId = specialtyId, DoctorId = doctor.DoctorId});
+      }//end new stuff
       _db.Entry(doctor).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");

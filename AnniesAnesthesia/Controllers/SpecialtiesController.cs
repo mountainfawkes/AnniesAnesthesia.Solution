@@ -23,6 +23,7 @@ namespace AnniesAnesthesia
     public ActionResult Create()
     {
       ViewBag.DoctorId = new SelectList(_db.Doctors, "DoctorId", "Name");
+      ViewBag.SpecialtyId = new SelectList(_db.Specialties, "SpecialtyId", "SpecialtyName");
       return View();
     }
     [HttpPost]
@@ -66,7 +67,6 @@ namespace AnniesAnesthesia
     {
       var thisSpecialty = _db.Specialties.FirstOrDefault(Specialty => Specialty.SpecialtyId == id);
       ViewBag.DoctorId = new SelectList(_db.Doctors, "DoctorId", "Name");
-      ViewBag.SpecialtyId = new SelectList(_db.Specialties, "SpecialtyId", "SpecialtyName");
       return View(thisSpecialty);
     }
     [HttpPost]
