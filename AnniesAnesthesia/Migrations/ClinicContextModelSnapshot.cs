@@ -49,10 +49,13 @@ namespace Clinic.Migrations
                     b.Property<DateTime>("RealHireDate")
                         .HasColumnType("datetime(6)");
 
+<<<<<<< HEAD
                     b.Property<string>("Specialty")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 >>>>>>> 54910cc (creates Home and Patients views)
 
+=======
+>>>>>>> 9563be7 (adds SpecialtiesJoinTable migration)
                     b.HasKey("DoctorId");
 
                     b.ToTable("Doctors");
@@ -80,6 +83,9 @@ namespace Clinic.Migrations
                 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9563be7 (adds SpecialtiesJoinTable migration)
             modelBuilder.Entity("AnniesAnesthesia.Models.DoctorSpecialty", b =>
                 {
                     b.Property<int>("DoctorSpecialtyId")
@@ -101,8 +107,11 @@ namespace Clinic.Migrations
                     b.ToTable("DoctorSpecialties");
                 });
 
+<<<<<<< HEAD
 =======
 >>>>>>> 54910cc (creates Home and Patients views)
+=======
+>>>>>>> 9563be7 (adds SpecialtiesJoinTable migration)
             modelBuilder.Entity("AnniesAnesthesia.Models.Patient", b =>
                 {
                     b.Property<int>("PatientId")
@@ -138,6 +147,9 @@ namespace Clinic.Migrations
                 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9563be7 (adds SpecialtiesJoinTable migration)
             modelBuilder.Entity("AnniesAnesthesia.Models.Specialty", b =>
                 {
                     b.Property<int>("SpecialtyId")
@@ -152,8 +164,11 @@ namespace Clinic.Migrations
                     b.ToTable("Specialties");
                 });
 
+<<<<<<< HEAD
 =======
 >>>>>>> 54910cc (creates Home and Patients views)
+=======
+>>>>>>> 9563be7 (adds SpecialtiesJoinTable migration)
             modelBuilder.Entity("AnniesAnesthesia.Models.DoctorPatient", b =>
                 {
                     b.HasOne("AnniesAnesthesia.Models.Doctor", "Doctor")
@@ -174,6 +189,9 @@ namespace Clinic.Migrations
                 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9563be7 (adds SpecialtiesJoinTable migration)
             modelBuilder.Entity("AnniesAnesthesia.Models.DoctorSpecialty", b =>
                 {
                     b.HasOne("AnniesAnesthesia.Models.Doctor", "Doctor")
@@ -198,11 +216,14 @@ namespace Clinic.Migrations
                     b.Navigation("JoinEntities");
 
                     b.Navigation("JoinEntitiesSpecialty");
+<<<<<<< HEAD
 =======
             modelBuilder.Entity("AnniesAnesthesia.Models.Doctor", b =>
                 {
                     b.Navigation("JoinEntities");
 >>>>>>> 54910cc (creates Home and Patients views)
+=======
+>>>>>>> 9563be7 (adds SpecialtiesJoinTable migration)
                 });
 
             modelBuilder.Entity("AnniesAnesthesia.Models.Patient", b =>
@@ -210,13 +231,19 @@ namespace Clinic.Migrations
                     b.Navigation("JoinEntities");
                 });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9563be7 (adds SpecialtiesJoinTable migration)
 
             modelBuilder.Entity("AnniesAnesthesia.Models.Specialty", b =>
                 {
                     b.Navigation("JoinEntitiesSpecialty");
                 });
+<<<<<<< HEAD
 =======
 >>>>>>> 54910cc (creates Home and Patients views)
+=======
+>>>>>>> 9563be7 (adds SpecialtiesJoinTable migration)
 #pragma warning restore 612, 618
         }
     }
