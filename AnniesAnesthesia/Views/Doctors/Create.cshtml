@@ -15,6 +15,7 @@
   @Html.LabelFor(model => model.RealHireDate)
   @Html.TextBoxFor(model => model.RealHireDate, new {@class="form-control", @type="date", @required="required"})
 
+<<<<<<< HEAD
   @Html.Label("Add a Specialty")
   @Html.DropDownList("SpecialtyId")
 
@@ -30,6 +31,12 @@
   @Html.TextBoxFor(model => model.Specialty, new { @class="form-control", @required="required"})
   @Html.LabelFor(model => model.HireDate)
   @Html.TextBoxFor(model => model.HireDate, new { @class="form-control", @required="required", type="date"})
+=======
+
+  @*@Html.LabelFor(model => model.HireDate)
+  @Html.TextBoxFor(model => model.HireDate, new { @class="form-control", @required="required", type="date"})*@
+  
+>>>>>>> db9ab8b (refactors with a new Specialties model)
   <input type="submit" value="Add new doctor" />
 }
 <<<<<<< HEAD

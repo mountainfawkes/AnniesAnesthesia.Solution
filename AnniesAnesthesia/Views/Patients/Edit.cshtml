@@ -9,6 +9,9 @@
 <h4>Edit this Patient: @Html.DisplayFor(model => model.Name)</h4>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> db9ab8b (refactors with a new Specialties model)
 <h4>Doctors the patient is assigned to:</h4>
 <ol>
   @foreach(var join in Model.JoinEntities)
@@ -29,6 +32,7 @@
   @Html.LabelFor(model => model.RealBirthDate)
   @Html.EditorFor(model => model.RealBirthDate, new {@class="form-control", @type="date", @required="required"})
 
+<<<<<<< HEAD
   <br>
   @Html.LabelFor(model => model.Ailment)
   @Html.TextBoxFor(model => model.Ailment)
@@ -59,11 +63,16 @@
   <br>
   @Html.LabelFor(model => model.Birthdate)
   @Html.TextBoxFor(model => model.Birthdate)
+=======
+  @*@Html.LabelFor(model => model.Birthdate)
+  @Html.TextBoxFor(model => model.Birthdate)*@
+
+>>>>>>> db9ab8b (refactors with a new Specialties model)
   <br>
   @Html.LabelFor(model => model.Ailment)
   @Html.TextBoxFor(model => model.Ailment)
   <br>
-  @Html.Label("Select Doctor")
+  @Html.Label("Add a doctor")
   @Html.DropDownList("DoctorId")
   <br>
   <input type="submit" value="Save" />

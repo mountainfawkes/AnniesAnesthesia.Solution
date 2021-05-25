@@ -23,7 +23,10 @@ namespace AnniesAnesthesia
     public ActionResult Create()
     {
       ViewBag.DoctorId = new SelectList(_db.Doctors, "DoctorId", "Name");
+<<<<<<< HEAD
       ViewBag.SpecialtyId = new SelectList(_db.Specialties, "SpecialtyId", "SpecialtyName");
+=======
+>>>>>>> db9ab8b (refactors with a new Specialties model)
       return View();
     }
     [HttpPost]
@@ -38,6 +41,7 @@ namespace AnniesAnesthesia
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+<<<<<<< HEAD
     // public ActionResult Details(int id)
     // {
     //   var thisSpecialty = _db.Specialties
@@ -46,6 +50,16 @@ namespace AnniesAnesthesia
     //     .FirstOrDefault(specialty => specialty.SpecialtyId == id);
     //   return View(thisSpecialty);
     // }
+=======
+    public ActionResult Details(int id)
+    {
+      var thisSpecialty = _db.Specialties
+        .Include(specialty => specialty.JoinEntitiesSpecialty)
+        .ThenInclude(join => join.Doctor)
+        .FirstOrDefault(specialty => specialty.SpecialtyId == id);
+      return View(thisSpecialty);
+    }
+>>>>>>> db9ab8b (refactors with a new Specialties model)
     public ActionResult Edit(int id)
     {
       var thisSpecialty = _db.Specialties.FirstOrDefault(specialty => specialty.SpecialtyId == id);
@@ -93,7 +107,11 @@ namespace AnniesAnesthesia
       return RedirectToAction("Index");
     }
     [HttpPost]
+<<<<<<< HEAD
     public ActionResult DeleteDoctor(int joinId)// do we need this?
+=======
+    public ActionResult DeleteCategory(int joinId)
+>>>>>>> db9ab8b (refactors with a new Specialties model)
     {
       var joinEntry = _db.DoctorSpecialties.FirstOrDefault(entry => entry.DoctorSpecialtyId == joinId);
       _db.DoctorSpecialties.Remove(joinEntry);

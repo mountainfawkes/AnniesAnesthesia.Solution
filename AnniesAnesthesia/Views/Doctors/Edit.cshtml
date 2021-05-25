@@ -15,6 +15,7 @@
   @Html.LabelFor(model => model.Name)
   @Html.EditorFor(model => model.Name)
 <<<<<<< HEAD
+<<<<<<< HEAD
   <br>
   @Html.LabelFor(model => model.RealHireDate)
   @Html.EditorFor(model => model.RealHireDate, new {@class="form-control", @type="date", @required="required"})
@@ -27,6 +28,15 @@
   @Html.EditorFor(model => model.Specialty)
   @Html.LabelFor(model => model.HireDate)
   @Html.EditorFor(model => model.HireDate)
+=======
+
+  @Html.LabelFor(model => model.RealHireDate)
+  @Html.EditorFor(model => model.RealHireDate, new {@class="form-control", @type="date", @required="required"})
+
+
+  @*@Html.LabelFor(model => model.HireDate)
+  @Html.EditorFor(model => model.HireDate)*@
+>>>>>>> db9ab8b (refactors with a new Specialties model)
 
 >>>>>>> 90a71d5 (adds CRUD functionality for doctors views)
   <input type="submit" value="Save" />
