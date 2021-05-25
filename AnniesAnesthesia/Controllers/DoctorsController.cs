@@ -74,6 +74,7 @@ namespace AnniesAnesthesia.Controllers
 
     [HttpPost]
 <<<<<<< HEAD
+<<<<<<< HEAD
     public ActionResult Edit(Doctor doctor, int specialtyId)//added int SpecialtyId
     {
       if (specialtyId != 0 )//new w/ added parameter
@@ -84,6 +85,14 @@ namespace AnniesAnesthesia.Controllers
     public ActionResult Edit(Doctor doctor)
     {
 >>>>>>> fbd9cde (adds CRUD functionality to doctor and patient models and routes Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
+=======
+    public ActionResult Edit(Doctor doctor, int specialtyId)//added int SpecialtyId
+    {
+      if (specialtyId != 0 )//new w/ added parameter
+      {
+        _db.DoctorSpecialties.Add(new DoctorSpecialty() { SpecialtyId = specialtyId, DoctorId = doctor.DoctorId});
+      }//end new stuff
+>>>>>>> 770f74d (WIP connects a Doctor to a Specialty)
       _db.Entry(doctor).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");

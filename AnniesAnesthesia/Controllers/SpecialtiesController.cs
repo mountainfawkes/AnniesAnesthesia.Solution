@@ -24,9 +24,13 @@ namespace AnniesAnesthesia
     {
       ViewBag.DoctorId = new SelectList(_db.Doctors, "DoctorId", "Name");
 <<<<<<< HEAD
+<<<<<<< HEAD
       ViewBag.SpecialtyId = new SelectList(_db.Specialties, "SpecialtyId", "SpecialtyName");
 =======
 >>>>>>> db9ab8b (refactors with a new Specialties model)
+=======
+      ViewBag.SpecialtyId = new SelectList(_db.Specialties, "SpecialtyId", "SpecialtyName");
+>>>>>>> 770f74d (WIP connects a Doctor to a Specialty)
       return View();
     }
     [HttpPost]
@@ -87,7 +91,6 @@ namespace AnniesAnesthesia
     {
       var thisSpecialty = _db.Specialties.FirstOrDefault(Specialty => Specialty.SpecialtyId == id);
       ViewBag.DoctorId = new SelectList(_db.Doctors, "DoctorId", "Name");
-      ViewBag.SpecialtyId = new SelectList(_db.Specialties, "SpecialtyId", "SpecialtyName");
       return View(thisSpecialty);
     }
     [HttpPost]
