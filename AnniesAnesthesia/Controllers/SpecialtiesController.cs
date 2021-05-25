@@ -37,14 +37,14 @@ namespace AnniesAnesthesia
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-    public ActionResult Details(int id)
-    {
-      var thisSpecialty = _db.Specialties
-        .Include(specialty => specialty.JoinEntitiesSpecialty)
-        .ThenInclude(join => join.Doctor)
-        .FirstOrDefault(specialty => specialty.SpecialtyId == id);
-      return View(thisSpecialty);
-    }
+    // public ActionResult Details(int id)
+    // {
+    //   var thisSpecialty = _db.Specialties
+    //     .Include(specialty => specialty.JoinEntitiesSpecialty)
+    //     .ThenInclude(join => join.Doctor)
+    //     .FirstOrDefault(specialty => specialty.SpecialtyId == id);
+    //   return View(thisSpecialty);
+    // }
     public ActionResult Edit(int id)
     {
       var thisSpecialty = _db.Specialties.FirstOrDefault(specialty => specialty.SpecialtyId == id);
@@ -66,6 +66,7 @@ namespace AnniesAnesthesia
     {
       var thisSpecialty = _db.Specialties.FirstOrDefault(Specialty => Specialty.SpecialtyId == id);
       ViewBag.DoctorId = new SelectList(_db.Doctors, "DoctorId", "Name");
+      ViewBag.SpecialtyId = new SelectList(_db.Specialties, "SpecialtyId", "SpecialtyName");
       return View(thisSpecialty);
     }
     [HttpPost]
@@ -92,7 +93,7 @@ namespace AnniesAnesthesia
       return RedirectToAction("Index");
     }
     [HttpPost]
-    public ActionResult DeleteCategory(int joinId)
+    public ActionResult DeleteDoctor(int joinId)// do we need this?
     {
       var joinEntry = _db.DoctorSpecialties.FirstOrDefault(entry => entry.DoctorSpecialtyId == joinId);
       _db.DoctorSpecialties.Remove(joinEntry);
