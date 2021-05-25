@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Mvc.Rendering;
 =======
 >>>>>>> fbd9cde (adds CRUD functionality to doctor and patient models and routes Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
+=======
+using Microsoft.AspNetCore.Mvc.Rendering;
+>>>>>>> 2c8acb7 (update Doctors controller with specialties functionality)
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AnniesAnesthesia.Models;
@@ -27,9 +31,13 @@ namespace AnniesAnesthesia.Controllers
     public ActionResult Create()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       ViewBag.SpecialtyId = new SelectList(_db.Specialties, "SpecialtyId", "SpecialtyName");
 =======
 >>>>>>> fbd9cde (adds CRUD functionality to doctor and patient models and routes Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
+=======
+      ViewBag.SpecialtyId = new SelectList(_db.Specialties, "SpecialtyId", "SpecialtyName");
+>>>>>>> 2c8acb7 (update Doctors controller with specialties functionality)
       return View();
     }
 
@@ -54,9 +62,13 @@ namespace AnniesAnesthesia.Controllers
     {
       var thisDoctor = _db.Doctors.FirstOrDefault(doctor => doctor.DoctorId == id);
 <<<<<<< HEAD
+<<<<<<< HEAD
       ViewBag.SpecialtyId = new SelectList(_db.Specialties, "SpecialtyId", "Name");
 =======
 >>>>>>> fbd9cde (adds CRUD functionality to doctor and patient models and routes Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
+=======
+      ViewBag.SpecialtyId = new SelectList(_db.Specialties, "SpecialtyId", "Name");
+>>>>>>> 2c8acb7 (update Doctors controller with specialties functionality)
       return View(thisDoctor);
     }
 
