@@ -92,7 +92,7 @@ namespace AnniesAnesthesia
       return RedirectToAction("Index");
     }
     [HttpPost]
-    public ActionResult DeleteCategory(int joinId)
+    public ActionResult DeleteDoctor(int joinId)
     {
       var joinEntry = _db.DoctorPatient.FirstOrDefault(entry => entry.DoctorPatientId == joinId);
       _db.DoctorPatient.Remove(joinEntry);
