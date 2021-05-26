@@ -8,10 +8,6 @@
 
 <h4>Edit this Patient: @Html.DisplayFor(model => model.Name)</h4>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> db9ab8b (refactors with a new Specialties model)
 <h4>Doctors the patient is assigned to:</h4>
 <ol>
   @foreach(var join in Model.JoinEntities)
@@ -20,7 +16,6 @@
   }
 </ol>
 
-
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.PatientId)
@@ -28,49 +23,8 @@
   @Html.LabelFor(model => model.Name)
   @Html.EditorFor(model => model.Name)
   <br>
-
-  @Html.LabelFor(model => model.RealBirthDate)
-  @Html.EditorFor(model => model.RealBirthDate, new {@class="form-control", @type="date", @required="required"})
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <br>
-  @Html.LabelFor(model => model.Ailment)
-  @Html.TextBoxFor(model => model.Ailment)
-  <br>
-  @Html.Label("Add a doctor")
-  @Html.DropDownList("DoctorId")
-  <br>
-  <input type="submit" value="Save" />
-=======
-@using (Html.BeginForm())
-{
-<<<<<<< HEAD
-    @Html.HiddenFor(model => model.PatientId)
-
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
-
-    @Html.Label("Select Doctor")
-    @Html.DropDownList("DoctorId")
-
-    <input type="submit" value="Save" />
->>>>>>> 11c407b (adds CRUD views for patients)
-=======
-  @Html.HiddenFor(model => model.PatientId)
-  <br>
-  @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)
-  <br>
-  @Html.LabelFor(model => model.Birthdate)
-  @Html.TextBoxFor(model => model.Birthdate)
-=======
   @*@Html.LabelFor(model => model.Birthdate)
   @Html.TextBoxFor(model => model.Birthdate)*@
-
->>>>>>> db9ab8b (refactors with a new Specialties model)
-=======
->>>>>>> 0683ae3 (fixes minor issues in Patients and Doctors views)
   <br>
   @Html.LabelFor(model => model.Ailment)
   @Html.TextBoxFor(model => model.Ailment)
@@ -79,7 +33,6 @@
   @Html.DropDownList("DoctorId")
   <br>
   <input type="submit" value="Save" />
->>>>>>> 7430c64 (adds all patient properties to edit form)
 }
 
 <p>@Html.ActionLink("Back to list", "Index")</p>

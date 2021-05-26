@@ -14,41 +14,14 @@
 
   @Html.LabelFor(model => model.Name)
   @Html.EditorFor(model => model.Name)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   <br>
   @Html.LabelFor(model => model.RealHireDate)
   @Html.EditorFor(model => model.RealHireDate, new {@class="form-control", @type="date", @required="required"})
 
   @Html.Label("Add a Specialty")
   @Html.DropDownList("SpecialtyId")
+
   <br>
-=======
-  @Html.LabelFor(model => model.Specialty)
-  @Html.EditorFor(model => model.Specialty)
-  @Html.LabelFor(model => model.HireDate)
-  @Html.EditorFor(model => model.HireDate)
-=======
-
-=======
-  <br>
->>>>>>> 770f74d (WIP connects a Doctor to a Specialty)
-  @Html.LabelFor(model => model.RealHireDate)
-  @Html.EditorFor(model => model.RealHireDate, new {@class="form-control", @type="date", @required="required"})
-
-  @Html.Label("Add a Specialty")
-  @Html.DropDownList("SpecialtyId")
-<<<<<<< HEAD
-
-  @*@Html.LabelFor(model => model.HireDate)
-  @Html.EditorFor(model => model.HireDate)*@
->>>>>>> db9ab8b (refactors with a new Specialties model)
-
->>>>>>> 90a71d5 (adds CRUD functionality for doctors views)
-=======
-  <br>
->>>>>>> 770f74d (WIP connects a Doctor to a Specialty)
   <input type="submit" value="Save" />
 }
 <p>@Html.ActionLink("Back to list", "Index")</p>

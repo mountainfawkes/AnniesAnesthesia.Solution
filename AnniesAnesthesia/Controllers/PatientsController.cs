@@ -5,15 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AnniesAnesthesia.Models;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 namespace AnniesAnesthesia
-=======
-namespace AnniesAnesthesialers
->>>>>>> fbd9cde (adds CRUD functionality to doctor and patient models and routes Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
-=======
-namespace AnniesAnesthesia
->>>>>>> c600619 (corrects namespace Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
 {
   public class PatientsController : Controller
   {
@@ -28,10 +20,6 @@ namespace AnniesAnesthesia
     {
       return View(_db.Patients.ToList());
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e450e1f (completes and implements CRUD functionality Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
     public ActionResult Create()
     {
       ViewBag.DoctorId = new SelectList(_db.Doctors, "DoctorId", "Name");
@@ -49,11 +37,6 @@ namespace AnniesAnesthesia
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-<<<<<<< HEAD
-=======
->>>>>>> fbd9cde (adds CRUD functionality to doctor and patient models and routes Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
-=======
->>>>>>> e450e1f (completes and implements CRUD functionality Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
     public ActionResult Details(int id)
     {
       var thisPatient = _db.Patients
@@ -62,10 +45,6 @@ namespace AnniesAnesthesia
         .FirstOrDefault(patient => patient.PatientId == id);
       return View(thisPatient);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e450e1f (completes and implements CRUD functionality Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
     public ActionResult Edit(int id)
     {
       var thisPatient = _db.Patients.FirstOrDefault(patient => patient.PatientId == id);
@@ -113,25 +92,12 @@ namespace AnniesAnesthesia
       return RedirectToAction("Index");
     }
     [HttpPost]
-<<<<<<< HEAD
-<<<<<<< HEAD
     public ActionResult DeleteDoctor(int joinId)
-=======
-    public ActionResult DeleteCategory(int joinId)
->>>>>>> e450e1f (completes and implements CRUD functionality Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
-=======
-    public ActionResult DeleteDoctor(int joinId)
->>>>>>> c6159d2 (fixes route name for DeleteDoctor)
     {
       var joinEntry = _db.DoctorPatient.FirstOrDefault(entry => entry.DoctorPatientId == joinId);
       _db.DoctorPatient.Remove(joinEntry);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-<<<<<<< HEAD
-=======
->>>>>>> fbd9cde (adds CRUD functionality to doctor and patient models and routes Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
-=======
->>>>>>> e450e1f (completes and implements CRUD functionality Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
   }
 }
