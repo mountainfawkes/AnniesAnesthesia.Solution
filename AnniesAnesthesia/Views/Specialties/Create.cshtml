@@ -8,13 +8,13 @@
 
 @using (Html.BeginForm())
 {
-  @Html.Label("Select Doctor:")
-  @Html.DropDownList("DoctorId")
+  @* @Html.Label("Select Doctor:")
+  @Html.DropDownList("DoctorId") *@
   <br>
   @Html.LabelFor(model => model.SpecialtyName)
   @Html.TextBoxFor(model => model.SpecialtyName, new { @class="form-control", @required="required"})
 
-  @Html.DropDownList("SpecialtyId")
+  @* @Html.DropDownList("SpecialtyId") *@
   <br>
   <input type="submit" value="Add new specialty" class="btn btn-primary"/>
 }

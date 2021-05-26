@@ -14,7 +14,7 @@
 
 @foreach (Specialty specialty in Model)
 {
-  <li>@Html.ActionLink($"{specialty.SpecialtyName}", "Details", new { id = specialty.SpecialtyId })</li>
+  <li>@Html.ActionLink($"{specialty.SpecialtyName}", "Edit", new { id = specialty.SpecialtyId })</li>
 }
 
 <p>@Html.ActionLink("Add new specialty", "Create")</p>
