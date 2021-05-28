@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
-using System.ComponentModel;//new line
-using System.ComponentModel.DataAnnotations;//new line
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace AnniesAnesthesia.Models
 {
@@ -17,9 +17,9 @@ namespace AnniesAnesthesia.Models
     public int DoctorId { get; set; }
     public string Name { get; set; }
 
-    [DisplayName("RealHireDate")]//new line
-    [DataType(DataType.Date)]//new line
-    [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]//new line
+    [DisplayName("RealHireDate")]
+    [DataType(DataType.Date)]
+    [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
     public DateTime RealHireDate { get; set; }
 
     public virtual ICollection<DoctorPatient> JoinEntities { get; set; }

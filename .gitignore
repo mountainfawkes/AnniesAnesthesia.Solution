@@ -2,14 +2,8 @@
 */bin/
 */appsettings.json
 */.vscode
-<<<<<<< HEAD
-<<<<<<< HEAD
 */.DS_Store
 .env
-=======
 */.vs
->>>>>>> e6d362d (junk commit restructures files Co-authored-by: Ahmed Ghouzlane <ahmedghouzlane@gmail.com> Co-authored-by: Tiffany Greathead <tiffanygreathead@gmail.com> Co-authored-by: Giancarlo Vigneri <bobloblaw.vigneri@gmail.com>)
-=======
 */.DS_Store
 .env
->>>>>>> dc528e6 (removes executable property group and updates .gitignore)
